@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <style>
+      #first-name {
+        border: 0px;
+        border-bottom: thick lightgrey dotted;
+      }
+      input[type=text] {
+        border: 0px;
+        border-bottom: thick lightgrey dotted;
+      }
+      input[type=date] {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <p>Hello!  Feel free to send us an email!</p>
+    <!-- RESTful API - POST, GET, DELETE, PATCH -->
+    <!-- <form action="/index.html" method="POST"> -->
+    <form action="index.html" method="POST">
+      <div>
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" placeholder="e.g. John">
+      </div>
+      <div>
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" placeholder="e.g. Doe">
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <select>
+          <option disabled>Less than 18</option>
+          <option hidden>18 - 35</option>
+          <option selected>35- 65</option>
+          <option>65+</option>
+        </select>
+      </div>
+      <div>
+        <label>Eye Color</label>
+        <input type="radio" name="eye-color" value="blue">Blue
+        <input type="radio" name="eye-color" value="black">Black
+        <input type="radio" name="eye-color" value="red">Red
+      </div>
+
+      <!--
+          http://www.codecore.com/contact.html?eye-color=black&hobbies=basketball
+      -->
+      <div>
+        <label>Hobbies</label>
+        <input type="checkbox" name="hobbies" id="basketball">
+        <label for="basketball">Basketball</label>
+        <input type="checkbox" name="hobbies"><label>Soccer</label>
+        <input type="checkbox" name="hobbies"><label>Knitting</label>
+      </div>
+      <div>
+        <input type="password" name="" value="">
+        <input type="color" name="" value="">
+        <input type="date" name="" value="">
+      </div>
+      <!-- text, password, email, checkbox, radio, submit... -->
+      <input type="submit">
+    </form>
+  </body>
+</html>
+
+<!--
+
+JavaScript:   camelCase
+let yourName = "Jacob";
+
+Ruby: snake_case
+this_is_a_variable = 42;
+
+HTML/CSS:  kebab-case
+class="this-is-a-css-class-name"
+
+.this-is-a-css-classs-name {
+
+}
+<body data-toggle="scroll">
+
+Hungarian Notation
+iAge (integer age)
+sName (string name)
+
+
+
+
+
+
+
+
+
+-->

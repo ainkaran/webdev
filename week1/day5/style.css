@@ -1,0 +1,124 @@
+/*<h1></h1>*/
+h1 {
+  font-family: cursive;
+  font-size: 40px;
+  color: gold;
+  text-decoration: line-through;
+}
+
+/*<highlight></highlight>*/
+/*<? class="highlight">*/
+.highlight {
+  background-color: gold;
+  font-weight: bold;
+}
+
+.striked-out {
+  text-decoration: line-through;
+}
+
+#author {
+  font-family: fantasy;
+  font-color: teal;
+  background-color: firebrick;
+  border-radius: 10px;
+}
+
+.special {
+  background-color: pink !important;
+}
+
+/* CSS3 */
+#toc {
+  border: thin black solid;
+  background-color: lightgrey;
+  width: 325px;
+  height: 615px;
+  /*height: calc(100px / 2);*/
+
+  /* 00 - FF */
+  /*background-color: #CCCCCC;*/
+  /* 0 - 255 */
+  /*background-color: rbg(200, 200, 200);*/
+
+
+  /*border-width: thin;
+  border-color: black;
+  border-style: solid;*/
+}
+.unique {
+  background-color: rgb(255, 255, 0);
+  color: #0000DD;
+}
+
+/* the space represents ancestry */
+ul li {
+  background-color: lavender;
+}
+
+ol li {
+  background-color: maroon;
+}
+
+/* direct descendant */
+ul > li {
+  color: green;
+}
+
+ol > li {
+  color: grey;
+}
+
+ul > li {
+  color: blue;
+}
+
+/* pseudo selector */
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+a {
+  color: teal;
+  background-color: lightblue;
+  border: thin solid maroon;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 10px;
+  font-family: Helvetica;
+  cursor: crosshair;
+}
+
+a:hover {
+  font-weight: bold;
+  border: thick solid maroon;
+}
+
+
+
+/*How to style all <p> elements within a <div> with a class “special”*/
+<div class="special">
+  <p>Blah blah blah</p>
+  <p>Blah blah blah</p>
+  <p>Blah blah blah</p>
+</div>
+
+div.special p
+div.special > p
+
+/*How to Style a <p> element that has a class “abc” and an id “xyz”*/
+
+<p class="abc" id="xyz"></p>
+<p id="xyz" class="abc" ></p>
+
+#xyz {}
+p#xyz {}
+p.abc#xyz {}
+p#xyz.abc {}
+
+
+
+
+
+
+/**/
