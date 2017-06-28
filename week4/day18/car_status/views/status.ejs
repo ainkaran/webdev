@@ -1,0 +1,51 @@
+<%- include('./partials/header') %>
+<h1>Car Status</h1>
+
+<% if (status.carYear) { %>
+  <h2>Thank you for submitting!</h2>
+<% } %>
+
+<%#g the form, they will get a page that displays "future", "new", "old" or "very old"  %>
+<% switch(true) {
+    case status.carYear > 2017: %>
+        <h2> Your car is a year greater than 2017 and is Future</h2> <%
+        break;
+    case status.carYear === 2017: %>
+        <h2> Your car is a year 2017 and is New</h2> <%
+        break;
+    case status.carYear > 2000 && status.carYear < 2017: %>
+        <h2> Your car is a year between 2000 and 2017 and is Old</h2> <%
+        break;
+    case status.carYear > 1950 && status.carYear < 2000: %>
+        <h2> Your car is a year less than 2000 and is Very old</h2> <%
+        break;
+    default: %>
+        <h2> Your car is a year greater than 2017 and is Future</h2> <%
+}
+%>
+
+<form method="POST" action="/status">
+  <div>
+    <label for="carYear">Car Status:</label>
+
+    <select class="caryear" name="carYear" value="<%= status.carYear%>">
+      <%
+        for(let i = 2017; i >= 1950; i-- ) { %>
+
+          <option value="<%= i %>">
+            <%= i %>
+          </option>
+
+      <%
+        }
+      %>
+    </select>
+
+  </div>
+
+  <div>
+    <input type="submit" name="" value="Submit">
+  </div>
+</form>
+
+<%- include('./partials/footer') %>
