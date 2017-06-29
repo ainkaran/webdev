@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+<h1>Random Person</h1>
+
+<% if (vrandomperson) { %>
+  <h2>Thank you for submitting!</h2>
+<% } %>
+
+<form method="POST" action="/random">
+  <div>
+    <%# <label for="randomName">Random Person:</label>%>
+    <input name="info" type="text" class="form-control" placeholder="Text input: type your name">
+  </div>
+
+  <div>
+    <input class="btn btn-info" type="submit" name="" value="Submit">
+  </div>
+</form>
+
+<h1>The winner is: <%=vrandomperson%> </h1>
+
+<%- include('./partials/footer') %>
