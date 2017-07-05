@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form>
+      <hr class="m-y-2">
+      <h5 class="m-b-2">Which topics interest you most?</h5>
+      <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">JavaScript frameworks</span>
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">JavaScript libraries</span>
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Node.js</span>
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">Build tools</span>
+      </label>
+      </div>
+      <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">ES2015</span>
+      </label>
+      </div>
+    </form>
+
+  </body>
+</html>
+
+
+<div>
+  <label for="fullName">Name:</label>
+  <input id="fullName" name="fullName" value="<%= vcontact.fullName %>" />
+</div>
+
+<div>
+  <label for="email">Email:</label>
+  <input id="email" type="email" name="email" value="<%= vcontact.email %>" />
+</div>

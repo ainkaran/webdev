@@ -1,6 +1,9 @@
+// Node and Express i
+
+
 // GitHub commit comment:
 // Add install yarn, .gitignore, create project: yarn init, add packages, create app.js,
-// Install nodemon & add start script, partials header & footer, install bodyParser, create contact form
+// install nodemon & add start script, partials header & footer, install bodyParser, create contact form
 //
 
 
@@ -66,7 +69,7 @@ app.get('/', function (request, response) {
 
 // URL: http://localhost:4545/contact HTTP VERB: GET
 app.get('/contact', function (request, response) {
-  response.render('contact', {contact: {}});
+  response.render('contact', {vContact: {}});
 });
 
 // URL: http://localhost:4545/contact HTTP VERB: POST
@@ -74,12 +77,13 @@ app.post('/contact', function (request, response) {
   // when a form post is parsed by bodyParser,
   // its data is formatted as a javascript object and it
   // assigned to the body property of request
-  response.render('contact', {contact: request.body});
+  console.log(request.body);
+  response.render('contact', {vContact: request.body});
 });
 
 // PORT is uppercased because we intend to be a constant.
 // It shouldn't be changed after it's declared.
-const PORT = 4545;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`🔥  Server listening on http://localhost:${PORT}`);
 });

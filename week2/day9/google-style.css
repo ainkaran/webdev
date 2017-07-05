@@ -1,0 +1,255 @@
+div#viewport {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: 1px green solid;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+element.style {
+}
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+html, body {
+    height: 100%;
+    margin: 0;
+}
+html[Attributes Style] {
+    -webkit-locale: "en-CA";
+}
+user agent stylesheet
+html {
+    display: block;
+}
+
+
+element.style {
+}
+user agent stylesheet
+head {
+    display: none;
+}
+Inherited from html
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+
+--
+
+element.style {
+}
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+body {
+    background: #fff;
+    color: #222;
+}
+?gws_rd=ssl:11
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+}
+?gws_rd=ssl:11
+html, body {
+    height: 100%;
+    margin: 0;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+Inherited from html
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+
+
+---
+
+
+element.style {
+}
+?gws_rd=ssl:52
+div#viewport {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: 1px green solid;
+}
+?gws_rd=ssl:11
+#viewport {
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+?gws_rd=ssl:11
+.ctr-p {
+    margin: 0 auto;
+    min-width: 980px;
+}
+inspector-stylesheet:1
+div {
+    border: 0.5px solid black;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body#gsr.hp.vasq
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+body {
+    background: #fff;
+    color: #222;
+}
+?gws_rd=ssl:11
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+}
+Inherited from html
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+
+---
+
+element.style {
+    display: none;
+}
+user agent stylesheet
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+user agent stylesheet
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 11px system-ui;
+}
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+Inherited from body#gsr.hp.vasq
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+body {
+    background: #fff;
+    color: #222;
+}
+?gws_rd=ssl:11
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+}
+Inherited from html
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+
+
+
+---
+
+element.style {
+}
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+body {
+    background: #fff;
+    color: #222;
+}
+?gws_rd=ssl:11
+body, td, a, p, .h {
+    font-family: arial,sans-serif;
+}
+?gws_rd=ssl:11
+html, body {
+    height: 100%;
+    margin: 0;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+Inherited from html
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+
+
+
+---
+
+
+element.style {
+}
+?gws_rd=ssl:11
+body, html {
+    font-size: small;
+}
+?gws_rd=ssl:11
+html, body {
+    height: 100%;
+    margin: 0;
+}
+html[Attributes Style] {
+    -webkit-locale: "en-CA";
+}
+user agent stylesheet
+html {
+    display: block;
+}
+
+*/

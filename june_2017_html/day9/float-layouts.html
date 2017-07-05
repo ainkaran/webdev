@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Float Layouts</title>
+    <style>
+      html {
+        font-size: 16px;
+        font-family: Helvetica;
+        font-weight: 100;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      h1 {
+        color: white;
+        font-family: Helvetica;
+        font-weight: 100;
+        margin: 5px;
+      }
+
+      header, footer {
+        padding: 1px;
+        background-color: firebrick;
+      }
+
+      /* Grid Styles */
+
+      /* the following selector will get all tags with the class .grid &
+      all tags with the class that begins with col- */
+      .grid, [class*='col-'] {
+        /* border-box will be used to simplify column size calculations */
+        box-sizing: border-box;
+      }
+
+      /* optional, but it typically looks better if elements are not directly
+      put against the borders */
+      .grid {
+        margin: 0 20px 20px 20px;
+      }
+
+      /* without this, columns of a grid would just stay on different lines */
+      [class*='col-'] {
+        float: left;
+      }
+
+      /* padding in between columns, but let's not do it on the last col */
+      [class*='col-']:not(:last-of-type) {
+        padding-right: 20px;
+      }
+
+      /* needed on the grid container, other all floated col-* would overflow 
+      the .grid element. this clears the float on the :after element */
+      .grid:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      .col-3-3 { width: 100%; }
+      .col-2-3 { width: 66.666%; }
+      .col-1-3 { width: 33.333%; }
+
+      /* the following is just to simulate content in our grids*/
+
+      .banner, .content, .sidebar {
+        width: 100%;
+        min-height: 100px;
+        padding: 1px;
+        background-color: teal;
+      }
+
+      .banner {
+        border-radius: 0 0 5px 5px;
+      }
+
+      .content, .sidebar {
+        border-radius: 5px;
+        min-height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="menu">
+      <h1>Header</h1>
+    </header>
+    <main>
+      <div class="grid">
+        <div class="col-3-3">
+          <div class="banner">
+            <h1>Banner</h1>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-2-3">
+          <div class="content">
+            <h1>Content</h1>
+          </div>
+        </div>
+        <div class="col-1-3">
+          <div class="sidebar">
+            <h1>Sidebar</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h1>Footer</h1>
+    </footer>
+
+  </body>
+</html>

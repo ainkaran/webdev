@@ -1,0 +1,32 @@
+/* selecting by tag name */
+h1 {
+  color: pink;
+  font-family: Helvetica;
+}
+p {
+  color: grey;
+}
+
+/* 2 other ways to select elements on my page */
+/* id - is used to target only one element */
+#first-name {
+  border-width: 0px;
+  border-bottom: dotted grey thin;
+}
+
+/* class - are meant to be reused */
+.highlight {
+  background-color: gold;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/**/

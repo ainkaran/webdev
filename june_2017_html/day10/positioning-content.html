@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Positioning Content</title>
+    <link rel="stylesheet" href="styles/index.css" type="text/css" media="screen" charset="utf-8">
+    <style>
+      .move-me {
+        border-radius: 5px;
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+      }
+      .move-me.a {
+        background-color: teal;
+        opacity: 0.2;
+      }
+
+      .move-me.b {
+        background-color: firebrick;
+        opacity: 0.5;
+      }
+
+      .move-me.c {
+        background-color: lemonchiffon;
+        opacity: 1;
+        width: 200px;
+        height: 200px;
+      }
+
+      .move-me.c > .b {
+        background-color: white;
+        border: solid medium teal;
+        opacity: 0.9;
+      }
+
+      .space {
+        height: 20vh;
+        padding: 1px;
+        border-right: thin dotted teal;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Position Property</h1>
+    <pre><strong>position:</strong> static;</pre>
+
+    <div class="move-me"></div>
+    <p><strong>Note:</strong> this is the default</p>
+
+    <pre><strong>position:</strong> fixed;</pre>
+    <div
+      style="position:fixed;"
+      class="move-me a"></div>
+    <p>We can give it coordinates relative to the top left corner with top and 
+      left.</p>
+
+    <div
+      style="position:fixed;top:0;left:80%;"
+      class="move-me a"></div>
+
+    <div class="space"></div>
+
+    <pre><strong>position:</strong> absolute;</pre>
+    <div
+      style="position:absolute;"
+      class="move-me b"></div>
+    <div class="space"></div>
+    <p>It's taken out of the flow, but it still moves with scrolling. You can think of its 
+      position as based on top left plus scroll coordinates</p>
+
+    <div
+      style="position:absolute;left:400px;"
+      class="move-me b"></div>
+    <div class="space"></div>
+    <p>We can move it around with the properties top, bottom, right and 
+      left.</p>
+
+    <div
+      style="position:absolute;left:30vw;top:1000px;"
+      class="move-me b"></div>
+    <div class="space"></div>
+    <p>We can move it around with the properties top, bottom, right and 
+      left.</p>
+
+    <pre><strong>position:</strong> relative;</pre>
+    <div
+      style="position:relative;"
+      class="move-me c"></div>
+    <p>By itself, relative has little effect on the container.</p>
+
+    <div
+      style="position:relative;"
+      class="move-me c">
+      <div
+        style="position:absolute;"
+        class="move-me b"></div>
+      <!-- % is now based on the parent instead -->
+      <div
+        style="position:absolute;bottom:25%;right:25%;"
+        class="move-me b"></div>
+      <!-- you can send them out of the box -->
+      <!-- negative coordinates work too -->
+      <div
+        style="position:absolute;right:-50%;"
+        class="move-me b"></div>
+    </div>
+    <p>Children positioned absolutely now use the relative container as a base 
+    for their coordinate system.</p>
+
+    <p>Absolute is most often used inside a relative element.</p>
+
+    <pre><strong>z-index:</strong> [any integer];</pre>
+    <p>Elements positioned with absolute and fixed are normally stacked on top 
+      of each other based on the order they appear in HTML. First on bottom and 
+      last on top.</p>
+
+    <p>You can change that by using z-index. Changes the z coordinate.</p>
+    <div
+      style="position:relative;"
+      class="move-me c">
+      <div
+        style="position:absolute;z-index:9;"
+        class="move-me b"></div>
+      <div
+        style="position:absolute;bottom:25%;right:25%;"
+        class="move-me b"></div>
+      <div
+        style="position:absolute;right:0;bottom:0;z-index:-3;"
+        class="move-me b"></div>
+      <!-- it also interacts with relative, be careful. You might put it under 
+      the container -->
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+body {
+  font-style: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #6481a1;
+  background-color: #003356;
+}
+
+ul {
+  list-style: none;
+  font-size: 20px;
+}
+ul li {
+  display: inline;
+}
+
+nav {
+  background-color: black;
+}
+nav a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

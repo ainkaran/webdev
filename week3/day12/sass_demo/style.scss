@@ -1,0 +1,33 @@
+// scss file
+$primary-color: #003356;
+$secondary-color: #6481a1;
+$header-font: "GraublauSlab Regular", Georgia, serif;
+$body-font: "Open Sans", Helvetica, Arial, sans-serif;
+
+$property1: font-style;
+$property2: color;
+$property3: background-color;
+
+$selector: body;
+
+#{$selector} {
+  #{$property1}: $body-font;
+  #{$property2}: $secondary-color;
+  #{$property3}: $primary-color;
+}
+ul {
+  list-style: none;
+  font-size: 20px;
+
+  li {
+    display: inline;
+  }
+}
+
+nav {
+  background-color: black;
+
+  a {
+    color: white;
+  }
+}

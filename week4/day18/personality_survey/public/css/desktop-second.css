@@ -1,0 +1,192 @@
+html {
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+body {
+  margin: 0;
+}
+
+body * {
+  /* we want tags to include borders, padding and margin in their final
+   * dimension calculations */
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+cite {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+header {
+  padding: 0 25px;
+  height: 50px;
+  width: 100%;
+  /* this position will force the element to be position according to
+   * browser window. it will not move with the rest of the page */
+  position: fixed;
+  /* when using position fixed,
+   * we have to tell it to stay at certain coordinates */
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+nav {
+  height: 100%;
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+}
+
+nav > a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav > a:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+/* auto-ed margins can be used to send flex-items to the other side */
+.nav-brand {
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* the img approach isn't working out
+ * if we give it a height and width, it'll lose it's proportion
+ * we'd have to use javascript to fix this. that is no fun
+ */
+
+/*
+main > img {
+  width: 100%;
+  height: 80vh;
+}
+*/
+
+main {
+  display: flex;
+  /* to make posts and the newsfeed scroll independantly we'll
+   * have to limit main to the size of the screen and
+   * force it to not scroll */
+  height: 100vh;
+  /* the overflow* property tells the browser what to do with content
+   * that doesn't fit inside of the box */
+  overflow-y: hidden;
+}
+
+.posts {
+  margin: 50px 25px 0 25px;
+  /* because main can't scroll, we have to indicate that posts should
+   * scroll */
+  overflow-y: scroll;
+}
+
+.posts > article {
+  width: 100%;
+  height: 80vh;
+
+  /* the following properties will set the background image
+   * to not repeat
+   * to be position in the center of the tag
+   * to always grow to cover the contents of the tag
+   */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 0 15px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+
+.posts > article:not(:first-of-type) {
+  height: 50vh;
+}
+
+.posts > article:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+.posts > article > * {
+  margin: 0 0 15px 0;
+}
+
+/* lets keep the newsfeed hidden in mobile form */
+main > .newsfeed {
+  display: none;
+}
+
+.newsfeed {
+  width: 30%;
+  flex-shrink: 0;
+  height: 100vh;
+
+  /* main can't scroll, this should scroll */
+  overflow-y: scroll;
+  border-left: thin solid gainsboro;
+
+  font-size: 0.7em;
+}
+
+.newsfeed > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 12.5px 0 25px;
+}
+
+.newsfeed > ul > li {
+  border-bottom: thin solid gainsboro;
+  /* we'll use flex to center all the content */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 0;
+}
+
+.newsfeed > ul > li > * {
+  margin: 0;
+}
+
+/* show the newsfeed when the screen width is larger than 700px */
+@media only screen and (min-width: 700px) {
+  .posts {
+    width: 70%;
+
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 12.5px;
+  }
+
+  .posts > article {
+    width: calc(50% - 25px);
+    margin: 0 12.5px;
+  }
+
+  /* every 7th post including the first take up the whole
+   * width */
+  .posts > article:nth-of-type(7n-6) {
+    width: 100%;
+  }
+
+  /* restore .newsfeed to its original display. make it visible */
+  main > .newsfeed {
+    display: initial;
+  }
+
+  header {
+    width: 70%;
+  }
+}

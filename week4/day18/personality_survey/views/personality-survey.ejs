@@ -1,0 +1,83 @@
+<%- include('./partials/header') %>
+<h1>Personality Survey</h1>
+
+<% if (vPersonalitySurvey && vContact) { %>
+  <h2>Thank you for submitting!</h2>
+<% } %>
+
+<form method="POST" action="/survey">
+  <div>
+    <label for="fullName">Name:</label>
+    <input id="fullName" name="fullName" value="<%= vContact.fullName %>" />
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" value="<%= vContact.email %>" />
+  </div>
+
+  <ol>
+    <li>
+      <h3>You work best: </h3>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q1" value="With deadline" checked>
+          With deadline
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q1" value="Without deadline">
+          Without deadline
+        </label>
+      </div>
+    </li>
+
+    <li>
+      <h3>You consider yourself more: </h3>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q2" value="Rational" checked>
+          Rational
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q2" value="Compassionate">
+          Compassionate
+        </label>
+      </div>
+    </li>
+
+    <li>
+      <h3>You are more interested in: </h3>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q3" value="Ideas" checked>
+          Ideas
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="q3" value="Facts">
+          Facts
+        </label>
+      </div>
+    </li>
+  </ol>
+  <div>
+    <input class="btn btn-info" type="submit">
+  </div>
+</form>
+
+<h4>Your are, "<%=vPersonalitySurvey%>", type person</h4>
+
+<h4>Your are like this personality</h4>
+
+<% if (vimgSrc) { %>
+  <img src="<%= vimgSrc %>" alt="Similar Personality" style="width: 200px; height: 200px;" >
+<% } %>
+
+<br> </br>
+
+<%- include('./partials/footer') %>

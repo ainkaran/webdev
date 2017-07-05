@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Querying The Medium</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    body > * {
+      box-sizing: border-box;
+    }
+
+    /* our initial styles before we add a media query
+    this could be considered our mobile first design */
+
+    .things {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      /* flex-flow combines flex-direction and flex-wrap */
+      flex-flow: column;
+      padding: 0 20px;
+    }
+
+    .things > li {
+      background-color: teal;
+      height: 50vh;
+    }
+
+    @media (max-width: 600px) {
+      .things > li:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 1000px) {
+      .things {
+        flex-flow: row wrap;
+        padding: 0 10px;
+      }
+      .things > li {
+        width: calc(50% - 20px);
+        height: 40vh;
+        margin: 0 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* prior media queries will stay in effect if we don't write a condition
+    to do otherwise */
+    @media (min-width: 1000px) {
+      .things {
+        flex-flow: row wrap;
+        padding: 0 10px;
+      }
+      .things > li {
+        width: calc(25% - 20px);
+        min-height: 40vh;
+        height: auto;
+        margin: 0 10px 20px 10px;
+      }
+
+      .things > li:first-of-type {
+        height: 60vh;
+        width: calc(50% - 20px)
+      }
+    }
+  </style>
+  <body>
+    <ul class="things">
+      <li></li> <li></li> <li></li>
+      <li></li> <li></li> <li></li>
+      <li></li> <li></li> <li></li>
+      <li></li> <li></li> <li></li>
+      <li></li> <li></li> <li></li>
+      <li></li> <li></li> <li></li>
+    </ul>
+  </body>
+</html>

@@ -1,11 +1,29 @@
-// GitHub commit comment:
-// Add install yarn, .gitignore, create project: yarn init, add packages, create app.js,
-// install nodemon & add start script, partials header & footer, install bodyParser, create contact form
-//
+// Assignment: [Lab] Car Status
+/*
+Build a web application with Express.js that has a page for users to enter the year of
+their car and then upon submitting the form, they will get a page that
+displays "future", "new", "old" or "very old" based on the year entered from the user.
+
+Stretch I
+Use switch & case statement instead of if & else.
+
+Stretch II
+Use a drop down list that is auto-populated with years from 2017 down to 1950.
+*/
+
+
+/*
+GitHub commit comment:
+Add install yarn, .gitignore, create project: yarn init, add packages, create app.js,
+install nodemon & add start script, partials header & footer, install bodyParser,
+create status form and functionalities
+*/
 
 
 // Step 1: Create project with `yarn init`
-// Step 2: Add Express package with `yarn add express body-parser ejs faker morgan `
+// Step 2: Add Express package with `yarn add express body-parser ejs faker morgan`
+// yarn add express body-parser ejs faker morgan
+// yarn add -D nodemon
 // Stem 3: config .gitignore with node_modules and .DS_Store
 // Step 3: Create `app.js` file
 // Step 4: Require Express in `app.js`

@@ -24,4 +24,4 @@ bc_cities_population.select { |key, value| value > 100000 }
 bc_cities_population.values.select { |value| value % 1000 }
 
 
-bc_cities_population.values.each {|key, value|}.collect {|x| p x%1000==0}
+bc_cities_population.values.each {|key, value|}.collect {|x| puts x%1000==0}

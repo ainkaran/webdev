@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Float Property</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
+    <style>
+      div {
+        min-width: 100px;
+        min-height: 100px;
+      }
+
+      .float-left {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Not Floated</h2>
+    <div class="vg">
+      <div>We're typical blocks</div>
+      <div>We stay on our lines</div>
+    </div>
+
+    <h1>Floated</h1>
+    <div class="vg">
+      <div style="float:left;">I've been floated to the left</div>
+      <div>My sibling only takes the space it needs</div>
+      <div style="float:right;">Floated elements should always be given a width. 
+      Their behaviour can be unpredictable otherwise</div>
+      <div>I take the rest</div>
+      <div style="float:left;width:33%;">A floated element might not expand the content 
+        box of its parent. In this case, I'm overflowing.</div>
+    </div>
+    <p><strong>Text will wrap around floated elements. See.</strong> Air plant 3 
+      wolf moon narwhal four loko microdosing bitters banh mi, tumblr fap before 
+      they sold out fingerstache hoodie. Fashion axe single-origin coffee 
+      affogato knausgaard. Normcore la croix butcher activated charcoal, 
+      sartorial +1 polaroid vape church-key beard pork belly. Tacos leggings 
+      jean shorts, forage mixtape banh mi butcher microdosing cray tote bag 
+      seitan skateboard paleo occupy crucifix. Fap cardigan snackwave, squid 
+      sartorial brooklyn tbh selvage tattooed messenger bag gluten-free 
+      wayfarers church-key literally. Shabby chic tofu ethical iceland literally 
+      whatever.  Post-ironic disrupt freegan, tilde ugh retro VHS la croix 
+      organic.</p>
+
+    <h1>Clearing Floats</h1>
+    <div class="vg">
+      <p>By itself, a float is out of the flow which means it doesn't affect the size of 
+        it's parent unless...</p>
+      <img src="images/floating-cats.gif" style="float:left;"></img>
+      <p>we clear the float. This determines whether an element can wrap around 
+      a float or has to go below it.</p>
+      <div style="clear:both;">I have the property clear for both, right and 
+        left, floats. I won't wrap around a float</div>
+    </div>
+
+    <h1>Clearing Floats without an Extra Element</h1>
+    <style>
+      .vg > .float-left {
+        width: 40%;
+      }
+      /* :after & :before selectors append or prepend a virtual element to the 
+        selected element */
+      .clear-me:after {
+        /* it's necessary to give content or else it won't render */
+        content: '';
+        /* only block level elements can be cleared */
+        display: block;
+        clear: both;
+      }
+    </style>
+
+    <p>
+      Notice how the container is only holding the first two floated elements
+      inside. The rest overflowed. We need to add an element to clear the float 
+      at the end of the floated divs. This can be accomplished with pure css 
+      using <strong>:after</strong> and <strong>:before</strong>.
+    </p>
+    <div class="vg">
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+    </div>
+    <p style="clear:both;">Here is the above, but cleared.</p>
+    <div class="vg clear-me">
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+      <div class="float-left"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Relative Units</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
+
+    <style>
+      #demos > article {
+        padding: 1rem;
+        background-color: ghostwhite;
+      }
+
+      #demos > article:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      .examples > div:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      .examples > div {
+      }
+
+      .shape > h1 {
+        margin: 0;
+        padding: 0.5rem;
+        font-family: Helvetica;
+        font-weight: 100;
+        font-size: 2rem;
+      }
+
+      .shape {
+        border: medium solid teal;
+      }
+      .shape > .shape {
+        border: none;
+        background-color: firebrick;
+      }
+
+      .shape > .shape > h1 {
+        color: white;
+      }
+
+      .shape > * {
+        display: inline-block;
+      }
+    </style>
+
+  </head>
+  <body>
+    <section id="demos">
+      <article id="relative-units">
+        <h1>Relative Units</h1>
+
+        <div class="examples">
+          <h1>Pixels</h1>
+          <div class="shape" style="width:50px;"><h1>50px</h1></div>
+          <div class="shape" style="width:100px;"><h1>100px</h1></div>
+          <div class="shape" style="width:200px;"><h1>200px</h1></div>
+        </div>
+
+        <div class="examples">
+          <h1>Percentage</h1>
+          <div class="shape" style="width:500px;">
+            <div class="shape" style="width:50%;"><h1>50%</h1></div>
+            <h1>500px</h1>
+          </div>
+          <div class="shape" style="width:750px;">
+            <div class="shape" style="width:50%;"><h1>50%</h1></div>
+            <h1>750px</h1>
+          </div>
+          <div class="shape" style="width:750px;">
+            <div class="shape" style="width:10%;"><h1>10%</h1></div>
+            <h1>750px</h1>
+          </div>
+          <div class="shape" style="width:0;">
+            <div class="shape" style="width:10%;"><h1>10%</h1></div>
+          </div>
+          <p>10% of 0 is always 0.</p>
+          <div class="shape" style="width:20px;">
+            <div class="shape" style="width:200px;"><h1>10%</h1></div>
+          </div>
+          <p>Unlike %, px will overflow their parent tag when larger if 
+            allowed.</p>
+        </div>
+
+        <div class="examples">
+          <h1>Viewport *</h1>
+          <div class="shape" style="width:50vw;">
+            <div class="shape" style="width:50%;"><h1>50%</h1></div>
+            <h1>50vw</h1>
+          </div>
+          <p>Viewport units are proportional to the size of the browser window. Change 
+          the size of your browser.</p>
+          <div class="shape" style="width:50vh;">
+            <div class="shape" style="width:33%;"><h1>50%</h1></div>
+            <h1>50vh</h1>
+          </div>
+          <div class="shape" style="width:50vmin;">
+            <div class="shape" style="width:33%;"><h1>50%</h1></div>
+            <h1>50vmin</h1>
+          </div>
+          <div class="shape" style="width:50vmax;">
+            <div class="shape" style="width:33%;"><h1>50%</h1></div>
+            <h1>50vmax</h1>
+          </div>
+          <div class="shape" style="width:100vh;">
+            <div class="shape" style="width:33vw;"><h1>33vw</h1></div>
+            <h1>100vh</h1>
+          </div>
+          <p>Unlike % units, viewport units are completely independent of the 
+            size of their parent tag.</p>
+        </div>
+
+      </article>
+    </section>
+
+  </body>
+</html>

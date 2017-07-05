@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /*div {
+        width: 100px;
+        height: 100px;
+        display: block;
+      }*/
+      /*nav {
+        min-height: 100px;
+        background-color: lightgrey;
+        position: fixed;
+      }*/
+
+      .site-header {
+        background-color: royalblue;
+        /*float: left;*/
+        width: 100%;
+        /*height: 50px;*/
+        /*flex-shrink: 0;*/
+        z-index: 1;
+        position: fixed;
+        margin-top: -10px;
+      }
+
+      .content {
+        display: flex;
+        min-height: 100vh;
+        width: 100vw;
+      }
+
+      .left-column {
+        background-color: mediumblue;
+        /*flex: 4;*/
+        text-align: center;
+        border: 0.25px solid black;
+        width: 25%;
+      }
+
+      .center-column {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        border: 0.25px solid black;
+        width: 50%;
+      }
+      .center-column .big-box {
+        background-color: white;
+        width: 700px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .center-column .small-box {
+        background-color: white;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .right-column {
+        flex: 3;
+        background-color: mediumblue;
+        text-align: center;
+        border: 0.25px solid black;
+        /*width: 99%;*/
+        /*justify-content: flex-end;*/
+      }
+
+      .right-column .small-box {
+        background-color: white;
+        /*flex-direction: column;*/
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .site-footer {
+        background-color: lightgrey;
+        float: left
+        width: 100%;
+        height: 50px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <!-- <nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </nav> -->
+
+    <header class="site-header">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </header>
+
+    <div class="content">
+      <div class="left-column">
+        <p>left</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="center-column">
+        <p>center</p>
+        <div class="big-box">
+          <p>big box</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <p>right</p>
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+        <div class="small-box">
+          <p>small box</p>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer"></footer>
+  </body>
+</html>

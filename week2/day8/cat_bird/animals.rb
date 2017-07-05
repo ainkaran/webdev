@@ -14,7 +14,7 @@ that has a method called `random_number`. Include the module in your classes and
 use the `random_number` method if it makes sense.
 =end
 
-require './helper_methods.rb'
+require './helper_methods'
 # load './helper_methods.rb'
 
 class Animals

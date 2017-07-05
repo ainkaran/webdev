@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Display Property</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
+    <style>
+      /* INLINE DEMO */
+      .inline-demo > * {
+        border: thin dotted firebrick;
+      }
+      /* INLINE DEMO */
+
+      /* INLINE-BLOCK DEMO */
+      .ib {
+        display: inline-block;
+      }
+
+      .half-page {
+        height: 150px;
+        width: 50%;
+        /* box-sizing determines how the final dimensions of an element 
+        are calculated */
+        box-sizing: border-box;
+      }
+      /* INLINE-BLOCK DEMO */
+    </style>
+  </head>
+
+  <body>
+    <!-- BLOCK DEMO -->
+    <h1>Block Demo</h1>
+      <div class="vg">I take up all horizontal space</div>
+      <div
+        style="padding:20px;margin:20px"
+        class="vg">
+        Padding and margin work normally around me
+      </div>
+      <div
+        style="padding:20px;margin:20px"
+        class="vg">
+        <div>We can be nested</div>
+        <div>We'll be greedy
+          <div>We'll take all the space inside</div>
+        </div>
+      </div>
+
+    <hr>
+    <!-- INLINE DEMO -->
+    <h1>Inline Demo</h1>
+
+    <!-- span is an inline tag meant to be customized to your liking -->
+    <p class="inline-demo">
+      Raw denim trust fund lomo
+      <span style="padding:20px;">my vertical padding bleeds on other lines</span>
+      viral chicharrones. Put a bird on it enamel pin shoreditch bitters. Tumeric 
+      <span style="margin:20px;">my vertical margin doesn't work</span> viral 
+      enamel pin fixie messenger <em>bag retro farm-to-table hexagon</em> roof 
+      party cardigan, <strong>health goth small</strong> batch. Vexillologist 
+      food truck plaid, etsy kogi skateboard salvia coloring book DIY 
+      hoodie lumbersexual.
+      <!-- <div>I am a test. Notice how I break the paragraph!</div> -->
+    </p>
+    <!-- it's illegal put to block elements inside a p tag -->
+    <!-- INLINE DEMO -->
+
+    <hr>
+
+    <!-- INLINE-BLOCK DEMO -->
+    <h1>Inline-Block Demo</h1>
+    <h2>Inlined</h2>
+    <div class="vg">
+      <div class="ib vg">We only take what we need</div>
+      <div class="ib vg">We leave space for others</div>
+      <span>Inline-block plays along with us inline elements</span>
+      <div class="ib vg">If we don't fit on a line, we will keep our box shape 
+        but our box will inline. See look at my box!</div>
+      <div class="ib vg" style="padding:20px;">Our padding doesn't bleed 
+        vertically</div>
+      <div class="ib vg" style="margin:20px;">Our margin also takes after block 
+        style elements</div>
+    </div>
+
+    <h2>Splitting a Page</h2>
+
+    <p>Why is there space that won't go away between the blocks?</p>
+    <!-- margin:0; will not remove this spacing -->
+    <div class="ib vg half-page">
+      I'm exactly 50%. Why won't I fit on the same line as my sis?
+    </div>
+    <div class="ib vg half-page">
+      Why can't I fit on the same line as my bro?
+    </div>
+    <!-- It's an automatically space as in spacing between words in a paragraph 
+    -->
+
+
+    <p>You can get rid of it by not leaving any space between sibling elements 
+      like below</p>
+    <div class="ib vg half-page">
+    </div><div class="ib vg half-page">
+    </div>
+
+    <hr>
+    <!-- INLINE-BLOCK DEMO -->
+
+  </body>
+</html>

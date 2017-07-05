@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+<h1>Contact</h1>
+
+<% if (contact.fullName && contact.email) { %>
+  <h2>Thank you for submitting!</h2>
+<% } %>
+
+<form method="POST" action="/contact">
+  <div>
+    <label for="fullName">Name:</label>
+    <input id="fullName" name="fullName" value="<%= contact.fullName %>" />
+  </div>
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select a Language
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">English</a>
+      <a class="dropdown-item" href="#">French</a>
+      <a class="dropdown-item" href="#">Spanish</a>
+    </div>
+  </div>
+
+  <div>
+    <input type="submit" name="" value="Submit">
+  </div>
+</form>
+
+<%- include('./partials/footer') %>

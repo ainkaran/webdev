@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Display Property</title>
+    <style>
+      /* block */
+        /* div, p, h1-6, hr */
+      div {
+        background-color: teal;
+        border: thick solid firebrick;
+        width: 100px;
+        height: 100px;
+        display: block;
+      }
+      span {
+        background-color: teal;
+        border: thick solid firebrick;
+        width: 100px; /* ignores width */
+        height: 100px; /* ignores height */
+        display: inline;
+      }
+      /* inline */
+        /* img, span, a */
+
+      /* inline-block */
+        /* button */
+
+      /* none */
+        /* title */
+      button {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .exactly-half {
+        margin: 0px;
+        padding: 0px;
+        background-color: teal;
+        border: thick solid firebrick;
+        /*border: 0px;*/
+        width: 50%;
+        height: 100px;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="exactly-half"></div><div class="exactly-half"></div>
+
+    All you need is                     love.
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <span>Hello</span>
+    <span>Cohort</span>
+    <span>19!</span>
+    <img border="1px" width="100px" src="http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-21.jpg" />
+
+    <button>Yes</button>
+    <button>No</button>
+    <button>Maybe?</button>
+  </body>
+</html>
